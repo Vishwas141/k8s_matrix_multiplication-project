@@ -17,3 +17,9 @@ kubectl apply -f k8s-manifests.yaml
 
 # View logs
 kubectl logs -f deployment/custom-app
+
+# To access Pod and take out the csv file from the pod
+kubectl exec -it pod_name  -- /bin/sh
+kubectl cp pod_name:/app/processing_times.csv ./processing_times.csv
+
+
